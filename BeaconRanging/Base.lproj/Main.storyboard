@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="BeaconRanging" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kMK-bV-v0s">
+                                <rect key="frame" x="16" y="104" width="343" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="02E-B6-gcQ"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yuN-cN-2Rw">
+                                <rect key="frame" x="16" y="165" width="343" height="90"/>
+                                <color key="backgroundColor" red="0.27205381369999998" green="1" blue="0.24108382319999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="31"/>
+                                <state key="normal" title="Start Ranging">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="startStopTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MjP-sV-npr"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Pq-hV-A4g">
+                                <rect key="frame" x="16" y="335" width="343" height="55"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="eFE-a1-7ma"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="kMK-bV-v0s" firstAttribute="leading" secondItem="yuN-cN-2Rw" secondAttribute="leading" id="EoS-7r-QRo"/>
+                            <constraint firstItem="kMK-bV-v0s" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="MiK-Ww-onE"/>
+                            <constraint firstItem="kMK-bV-v0s" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="Ugm-cY-2ZV"/>
+                            <constraint firstItem="0Pq-hV-A4g" firstAttribute="top" secondItem="yuN-cN-2Rw" secondAttribute="bottom" constant="80" id="YZU-Vd-goL"/>
+                            <constraint firstItem="yuN-cN-2Rw" firstAttribute="top" secondItem="kMK-bV-v0s" secondAttribute="bottom" constant="31" id="ZAr-x1-4oN"/>
+                            <constraint firstItem="kMK-bV-v0s" firstAttribute="trailing" secondItem="yuN-cN-2Rw" secondAttribute="trailing" id="gNH-IC-T5y"/>
+                            <constraint firstItem="0Pq-hV-A4g" firstAttribute="leading" secondItem="yuN-cN-2Rw" secondAttribute="leading" id="hdc-4S-Cz7"/>
+                            <constraint firstItem="kMK-bV-v0s" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="84" id="nRq-ZJ-cXU"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="yuN-cN-2Rw" secondAttribute="bottom" constant="412" id="p8h-jn-YwC"/>
+                            <constraint firstItem="0Pq-hV-A4g" firstAttribute="trailing" secondItem="yuN-cN-2Rw" secondAttribute="trailing" id="qg2-Dl-d3C"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="beaconDetectedLabel" destination="0Pq-hV-A4g" id="Rtl-hb-JU4"/>
+                        <outlet property="startStopButton" destination="yuN-cN-2Rw" id="32e-DB-35y"/>
+                        <outlet property="uuidField" destination="kMK-bV-v0s" id="CYr-gC-C6i"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="140" y="138.98050974512745"/>
+        </scene>
+    </scenes>
+</document>
