@@ -23,17 +23,20 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kMK-bV-v0s">
-                                <rect key="frame" x="16" y="104" width="343" height="30"/>
+                                <rect key="frame" x="16" y="104" width="343" height="60"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="02E-B6-gcQ"/>
+                                    <constraint firstAttribute="height" constant="60" id="02E-B6-gcQ"/>
                                 </constraints>
                                 <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yuN-cN-2Rw">
-                                <rect key="frame" x="16" y="165" width="343" height="90"/>
+                                <rect key="frame" x="16" y="195" width="343" height="60"/>
                                 <color key="backgroundColor" red="0.27205381369999998" green="1" blue="0.24108382319999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="H4Z-c1-I50"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="31"/>
                                 <state key="normal" title="Start Ranging">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -62,7 +65,6 @@
                             <constraint firstItem="kMK-bV-v0s" firstAttribute="trailing" secondItem="yuN-cN-2Rw" secondAttribute="trailing" id="gNH-IC-T5y"/>
                             <constraint firstItem="0Pq-hV-A4g" firstAttribute="leading" secondItem="yuN-cN-2Rw" secondAttribute="leading" id="hdc-4S-Cz7"/>
                             <constraint firstItem="kMK-bV-v0s" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="84" id="nRq-ZJ-cXU"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="yuN-cN-2Rw" secondAttribute="bottom" constant="412" id="p8h-jn-YwC"/>
                             <constraint firstItem="0Pq-hV-A4g" firstAttribute="trailing" secondItem="yuN-cN-2Rw" secondAttribute="trailing" id="qg2-Dl-d3C"/>
                         </constraints>
                     </view>

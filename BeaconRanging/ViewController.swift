@@ -104,6 +104,16 @@ extension ViewController: CLLocationManagerDelegate {
             beaconDetectedLabel.backgroundColor = UIColor.green
         }
     }
+    
+    func locationManager(_ manager: CLLocationManager, didExitRegion region: CLRegion) {
+        beaconDetectedLabel.backgroundColor = UIColor.red
+        print("vc exit")
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didEnterRegion region: CLRegion) {
+        beaconDetectedLabel.backgroundColor = UIColor.green
+        print("vc enter")
+    }
 }
 
 func locationManager(_ manager: CLLocationManager, monitoringDidFailFor region: CLRegion?, withError error: Error) {
