@@ -16,7 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     let locationManager = CLLocationManager()
     
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         let center = UNUserNotificationCenter.current()
         center.requestAuthorization(options:[.alert, .sound]) { (granted, error) in }
         locationManager.delegate = self
@@ -33,7 +33,7 @@ extension AppDelegate: CLLocationManagerDelegate {
         let content = UNMutableNotificationContent()
         content.title = "Beacon Ranging"
         content.body = "Exit"
-        content.sound = .default()
+        //content.sound = .default()
         
         let request = UNNotificationRequest(identifier: "BeaconRanging", content: content, trigger: nil)
         UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
@@ -45,7 +45,7 @@ extension AppDelegate: CLLocationManagerDelegate {
         let content = UNMutableNotificationContent()
         content.title = "Beacon Ranging"
         content.body = "Enter"
-        content.sound = .default()
+        //content.sound = .default()
         
         let request = UNNotificationRequest(identifier: "BeaconRanging", content: content, trigger: nil)
         UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
